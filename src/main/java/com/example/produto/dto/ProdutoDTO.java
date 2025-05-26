@@ -1,43 +1,17 @@
 package com.example.produto.dto;
 
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
+import com.example.produto.Produto;
+
 import jakarta.validation.constraints.NotNull;
 
-public class ProdutoDTO {
+public class ProdutoDTO extends ProdutoBaseDTO {
+	@NotNull
+	private Long id;
+    
+    public ProdutoDTO(Produto produto) {
+        this.id = produto.getId();
+        this.nome = produto.getNome();
+        this.preco = produto.getPreco();
+        this.quantidade = produto.getQuantidade();}
 
-    @NotBlank
-    private String nome;
-
-    @NotNull
-    @Min(0)
-    private Double preco;
-
-    @NotNull
-    @Min(0)
-    private Integer quantidade;
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(Double preco) {
-        this.preco = preco;
-    }
-
-    public Integer getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
-    }
 }
