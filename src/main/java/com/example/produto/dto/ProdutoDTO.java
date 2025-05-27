@@ -13,5 +13,8 @@ public class ProdutoDTO extends ProdutoBaseDTO {
         this.nome = produto.getNome();
         this.preco = produto.getPreco();
         this.quantidade = produto.getQuantidade();}
-
+    
+    public Long getId() {
+        return id;
+    }
 }

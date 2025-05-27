@@ -1,30 +1,102 @@
-# produto-crud-sqlite
-Projeto de um CRUD com Spring e SQLite
+https://github.com/seu-usuario/produto-crud-sqlite.git# 🛒 Produto CRUD API
 
+Uma API REST desenvolvida em **Java com Spring Boot**, com persistência de dados usando **SQLite**. Permite o cadastro, listagem, edição e exclusão de produtos, com suporte a **paginação** e **filtro por nome**.
 
-Atenção: Projeto em Desenvolvimento.
+---
 
-Recomendo usar o Insomnia para as requisições.
+## ✅ Funcionalidades
 
-Adicionar Produtos:
-POST http://localhost:8080/produtos
+- Cadastro de produtos
+- Listagem paginada de produtos
+- Filtro de produtos por nome (parcial e case-insensitive)
+- Atualização de dados do produto
+- Exclusão de produtos
+- Validações com Jakarta Bean Validation
 
-Corpo (JSON):
+---
+
+## 🚀 Tecnologias utilizadas
+
+- Java 17
+- Spring Boot
+- Spring Data JPA
+- SQLite
+- Jakarta Bean Validation
+- Maven
+
+---
+
+## 💾 Banco de dados
+
+A aplicação utiliza um banco **SQLite local** (arquivo `.db`). O arquivo é criado automaticamente na raiz do projeto ao rodar a aplicação pela primeira vez.
+
+---
+
+## 📦 Como rodar o projeto
+
+1. **Clone o repositório:**
+
+```bash
+git clone https://github.com/adrianoacarvalho/produto-crud-sqlite.git
+cd produto-crud-sqlite
+```
+
+2. **Configure o SQLite (opcional):**
+
+Não é necessário criar o banco manualmente — o Hibernate cria as tabelas automaticamente com base nas entidades.
+
+3. **Rode a aplicação:**
+
+```bash
+./mvnw spring-boot:run
+```
+
+A aplicação ficará disponível em:
+
+```
+http://localhost:8080
+```
+
+---
+
+## 📑 Endpoints principais
+
+| Método | Endpoint       | Descrição                            |
+|--------|----------------|----------------------------------------|
+| GET    | `/produtos`    | Lista produtos com paginação          |
+| GET    | `/produtos?nome=caneta` | Lista produtos filtrando por nome |
+| POST   | `/produtos`    | Cadastra um novo produto              |
+| PUT    | `/produtos/{id}` | Atualiza os dados de um produto       |
+| DELETE | `/produtos/{id}` | Remove um produto                     |
+
+---
+
+## 📘 Exemplo de JSON para cadastro
+
+```json
 {
-  "nome": "Teclado Mecânico",
-  "preco": 199.99,
-  "quantidade": 5
+  "nome": "Caderno",
+  "preco": 15.90,
+  "quantidade": 50
 }
+```
 
-Listar Produtos:
-GET http://localhost:8080/produtos
+---
 
-Listar Produtos com Filtro:
-GET http://localhost:8080/produtos?page=0&size=5&nome=mouse
+## 📚 Futuras melhorias
 
-Sem Filtro:
-GET http://localhost:8080/produtos?page=0&size=10
+- Documentação com Swagger/OpenAPI
+- Testes unitários e de integração
+- Autenticação com Spring Security
+- Deploy em nuvem (Heroku, Vercel, Railway etc.)
+- Integração com frontend (React, Angular, etc.)
 
+---
 
-TODO:
-Na listagem fornercer o ID do produto.
+## 👨‍💻 Autor
+
+**Adriano Carvalho**  
+Desenvolvedor backend em transição de carreira  
+
+- [Blog pessoal](https://adrianocarva1ho.blogspot.com)  
+- [LinkedIn](https://www.linkedin.com/adrianocarva1ho)
