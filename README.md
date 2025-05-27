@@ -1,4 +1,4 @@
-https://github.com/seu-usuario/produto-crud-sqlite.git# 🛒 Produto CRUD API
+# 🛒 Produto CRUD API
 
 Uma API REST desenvolvida em **Java com Spring Boot**, com persistência de dados usando **SQLite**. Permite o cadastro, listagem, edição e exclusão de produtos, com suporte a **paginação** e **filtro por nome**.
 
@@ -101,7 +101,4 @@ Desenvolvedor backend em transição de carreira
 <<<<<<< HEAD
 - [Blog pessoal](https://adrianocarva1ho.blogspot.com)  
 - [LinkedIn](https://www.linkedin.com/adrianocarva1ho)
-=======
-TODO:
-Na listagem fornecer o ID do produto.
->>>>>>> c8daa79a97fe07cf61fe61085cbb76f43490428c
+=====
