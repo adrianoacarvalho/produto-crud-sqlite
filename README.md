@@ -98,5 +98,10 @@ http://localhost:8080
 **Adriano Carvalho**  
 Desenvolvedor backend em transição de carreira  
 
+<<<<<<< HEAD
 - [Blog pessoal](https://adrianocarva1ho.blogspot.com)  
 - [LinkedIn](https://www.linkedin.com/adrianocarva1ho)
+=======
+TODO:
+Na listagem fornecer o ID do produto.
+>>>>>>> c8daa79a97fe07cf61fe61085cbb76f43490428c
